@@ -1,0 +1,25 @@
+.about {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+
+    .text {
+      margin-bottom: 10px;
+      font-size: 20px
+    }
+  }
+
+  &__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,41 @@
+.header {
+  padding: 0 20px 0 10px;
+  background: linear-gradient(to right, #4c77b6, #6494c4);
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+
+  .logo {
+    &__earth {
+      margin-top: 3px;
+      width: 45px;
+    }
+  }
+
+  .title {
+    &__text {
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+
+  .back {
+    &__button {
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: transparent;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+
+      &:hover {
+        box-shadow: 0px 0px 5px 2px rgba(248, 246, 246, 0.3);
+      }
+    }
+  }
+}
+

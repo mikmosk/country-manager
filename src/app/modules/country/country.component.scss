@@ -1,0 +1,36 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 25vw;
+  height: calc(100vh - 120px);
+
+
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+
+    &__text {
+      width: 300px;
+      height: max-content;
+
+      h2 {
+        font-weight: 200;
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__field {
+    font-size: 24px;
+    font-weight: 400;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}

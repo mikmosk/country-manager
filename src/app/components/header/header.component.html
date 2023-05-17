@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="logo">
+    <img class="logo__earth" src="./../../../assets/images/logo_earth.png" />
+  </div>
+  <div class="title">
+    <h2 class="title__text">Country manager</h2>
+  </div>
+  <div class="back">
+    <button
+      class="back__button"
+      *ngIf="headerService.showBackButton"
+      (click)="goBack()"
+    >
+      Back
+    </button>
+  </div>
+</header>

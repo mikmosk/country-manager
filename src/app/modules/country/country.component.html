@@ -1,0 +1,36 @@
+<div class="country">
+  <ng-container *ngIf="country$ | async as country; else loader">
+    <div class="header">
+      <div class="header__flag">
+        <img src="{{ country.flags.png }}" alt="{{ country.name.common }}" />
+      </div>
+      <div class="header__text">
+        <h2>{{ country.name.common }}</h2>
+      </div>
+    </div>
+    <h3 class="country__field">
+      Official Name: <span>{{ country.name.official }}</span>
+    </h3>
+    <h3 class="country__field">
+      Capital: <span>{{ country.capital | join : ", " }}</span>
+    </h3>
+    <h3 class="country__field">
+      Population: <span>{{ country.population | number }} people</span>
+    </h3>
+    <h3 class="country__field">
+      Area: <span>{{ country.area | number }} sq.m.</span>
+    </h3>
+    <h3 class="country__field">
+      Currency:
+      <ng-container
+        *ngFor="let currency of country.currencies | keyvalue; let last = last"
+      >
+        <span>{{ currency.value.name }}</span>
+        <span *ngIf="!last">, </span>
+      </ng-container>
+    </h3>
+  </ng-container>
+</div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

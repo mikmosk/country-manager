@@ -1,0 +1,12 @@
+.region {
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+  }
+}
+

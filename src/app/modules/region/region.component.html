@@ -1,0 +1,14 @@
+<div class="region">
+  <div class="region__cards" *ngIf="region$ | async as region; else loader">
+    <ng-container *ngFor="let country of region">
+      <app-card
+        [flag]="country.flags.png"
+        [name]="country.name.common"
+        (click)="routeTo(country.name.common)"
+      ></app-card>
+    </ng-container>
+  </div>
+</div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
